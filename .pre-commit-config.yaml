@@ -143,8 +143,9 @@ repos:
       - id: markdownlint
         name: E1) Markdown lint
         # Uses .markdownlint-cli2.yaml if present, otherwise defaults.
-        language: system
-        entry: npx markdownlint-cli2 --fix
+        language: node
+        additional_dependencies: [markdownlint-cli2]
+        entry: markdownlint-cli2 --fix
         pass_filenames: false
         always_run: true
 
