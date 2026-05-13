@@ -231,7 +231,7 @@ git commit -m "your message here"
 git push -u origin main
 ```
 
-### In VS Code Terminal 4: Run Consumer (consumer)
+### In VS Code Terminal 4: Run Consumer (consumer) bd
 
 Open another VS Code terminal. Rename it `consumer`.
 If running Windows, use **PowerShell**.
