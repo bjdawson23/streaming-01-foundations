@@ -212,6 +212,7 @@ uvx pre-commit run --all-files
 
 # run the producer (produces messages)
 uv run python -m streaming.producer_case
+uv run python -m streaming.producer_dawson
 
 # do chores
 uv run ruff format .
@@ -241,7 +242,12 @@ Verify Kafka is reachable, then start the consumer.
 ```shell
 clear
 uv run python -m streaming.consumer_case
+uv run python -m streaming.consumer_dawson
 ```
+
+- I changed the PRODUCER_MESSAGE_COUNT in the .env.example file from the default of 3 to 25
+- Then back to 1 and back to 3.
+- It seemed to take a bit longer when I increased to 25 and then ran faster at a value of 1.
 
 </details>
 

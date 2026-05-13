@@ -197,3 +197,583 @@
 2026-05-12 21:59:15 | INFO | C01 | Topic file not found yet. Waiting...
 2026-05-12 21:59:15 | ERROR | C01 | Topic file not found: C:\Repos\streaming-01-foundations\data\output\missing-env-copy-env-example.csv
 2026-05-12 21:59:15 | ERROR | C01 | Run the local producer first, or run producer and consumer together.
+2026-05-13 14:17:50 | DEBUG | P01 | No variables found in .env
+2026-05-13 14:17:50 | INFO | P01 | === RUN START ===
+2026-05-13 14:17:50 | INFO | P01 | project=P01
+2026-05-13 14:17:50 | INFO | P01 | repo_dir=streaming-01-foundations
+2026-05-13 14:17:50 | INFO | P01 | python=3.14.2
+2026-05-13 14:17:50 | INFO | P01 | os=Windows 11
+2026-05-13 14:17:50 | INFO | P01 | shell=powershell
+2026-05-13 14:17:50 | INFO | P01 | cwd=.
+2026-05-13 14:17:50 | INFO | P01 | github_actions=False
+2026-05-13 14:17:50 | INFO | P01 | ========================
+2026-05-13 14:17:50 | INFO | P01 | START producer main()
+2026-05-13 14:17:50 | INFO | P01 | ========================
+2026-05-13 14:17:50 | INFO | P01 | ROOT_DIR = .
+2026-05-13 14:17:50 | INFO | P01 | DATA_DIR = data
+2026-05-13 14:17:50 | INFO | P01 | SALES_CSV = data\sales.csv
+2026-05-13 14:17:50 | INFO | P01 | TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 14:17:50 | INFO | P01 | ========================
+2026-05-13 14:17:50 | INFO | P01 | SECTION A. Acquire
+2026-05-13 14:17:50 | INFO | P01 | ========================
+2026-05-13 14:17:50 | INFO | P01 | Loading settings from .env...
+2026-05-13 14:17:50 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-topic-no-env
+2026-05-13 14:17:50 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = False
+2026-05-13 14:17:50 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 2
+2026-05-13 14:17:50 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 0.5
+2026-05-13 14:17:50 | INFO | P01 | Verifying local source data...
+2026-05-13 14:17:50 | INFO | P01 | Source file found: sales.csv
+2026-05-13 14:17:50 | INFO | P01 | Preparing local simulated topic file...
+2026-05-13 14:17:50 | INFO | P01 | Using existing topic file: streaming-01-topic-no-env.csv
+2026-05-13 14:17:50 | INFO | P01 | ========================
+2026-05-13 14:17:50 | INFO | P01 | SECTION P. Produce Messages
+2026-05-13 14:17:50 | INFO | P01 | ========================
+2026-05-13 14:17:50 | INFO | P01 | Sending messages...
+2026-05-13 14:17:50 | INFO | P01 | Sending up to 2 local message(s).
+2026-05-13 14:17:50 | INFO | P01 | Writing to simulated topic file: streaming-01-topic-no-env.csv
+2026-05-13 14:17:50 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-13 14:17:50 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 14:17:50 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 14:17:50 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-13 14:17:50 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 14:17:50 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 14:17:50 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-13 14:17:51 | INFO | P01 | ========================
+2026-05-13 14:17:51 | INFO | P01 | SECTION E. Exit
+2026-05-13 14:17:51 | INFO | P01 | ========================
+2026-05-13 14:17:51 | INFO | P01 | Summary:
+2026-05-13 14:17:51 | INFO | P01 | Sent 2 message(s).
+2026-05-13 14:17:51 | INFO | P01 | WROTE TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 14:17:51 | INFO | P01 | ========================
+2026-05-13 14:17:51 | INFO | P01 | Producer executed successfully!
+2026-05-13 14:17:51 | INFO | P01 | ========================
+2026-05-13 14:18:30 | DEBUG | C01 | No variables found in .env
+2026-05-13 14:18:30 | INFO | C01 | === RUN START ===
+2026-05-13 14:18:30 | INFO | C01 | project=C01
+2026-05-13 14:18:30 | INFO | C01 | repo_dir=streaming-01-foundations
+2026-05-13 14:18:30 | INFO | C01 | python=3.14.2
+2026-05-13 14:18:30 | INFO | C01 | os=Windows 11
+2026-05-13 14:18:30 | INFO | C01 | shell=powershell
+2026-05-13 14:18:30 | INFO | C01 | cwd=.
+2026-05-13 14:18:30 | INFO | C01 | github_actions=False
+2026-05-13 14:18:30 | INFO | C01 | ========================
+2026-05-13 14:18:30 | INFO | C01 | START consumer main()
+2026-05-13 14:18:30 | INFO | C01 | ========================
+2026-05-13 14:18:30 | INFO | C01 | ROOT_DIR = .
+2026-05-13 14:18:30 | INFO | C01 | DATA_DIR = data
+2026-05-13 14:18:30 | INFO | C01 | TOPIC_CSV = data\output\missing-env-copy-env-example.csv
+2026-05-13 14:18:30 | INFO | C01 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-13 14:18:30 | INFO | C01 | ========================
+2026-05-13 14:18:30 | INFO | C01 | SECTION A. Acquire
+2026-05-13 14:18:30 | INFO | C01 | ========================
+2026-05-13 14:18:30 | INFO | C01 | Loading settings from .env...
+2026-05-13 14:18:30 | INFO | C01 | KAFKA_TOPIC                    = missing-env-copy-env-example
+2026-05-13 14:18:30 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 2
+2026-05-13 14:18:30 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-13 14:18:30 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 3.0
+2026-05-13 14:18:30 | INFO | C01 | Verifying local simulated topic file...
+2026-05-13 14:18:30 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:18:30 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:18:31 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:18:31 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:18:32 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:18:32 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:18:33 | ERROR | C01 | Topic file not found: C:\Repos\streaming-01-foundations\data\output\missing-env-copy-env-example.csv
+2026-05-13 14:18:33 | ERROR | C01 | Run the local producer first, or run producer and consumer together.
+2026-05-13 14:36:18 | DEBUG | P01 | No variables found in .env
+2026-05-13 14:36:18 | INFO | P01 | === RUN START ===
+2026-05-13 14:36:18 | INFO | P01 | project=P01
+2026-05-13 14:36:18 | INFO | P01 | repo_dir=streaming-01-foundations
+2026-05-13 14:36:18 | INFO | P01 | python=3.14.2
+2026-05-13 14:36:18 | INFO | P01 | os=Windows 11
+2026-05-13 14:36:18 | INFO | P01 | shell=powershell
+2026-05-13 14:36:18 | INFO | P01 | cwd=.
+2026-05-13 14:36:18 | INFO | P01 | github_actions=False
+2026-05-13 14:36:18 | INFO | P01 | ========================
+2026-05-13 14:36:18 | INFO | P01 | START producer main()
+2026-05-13 14:36:18 | INFO | P01 | ========================
+2026-05-13 14:36:18 | INFO | P01 | ROOT_DIR = .
+2026-05-13 14:36:18 | INFO | P01 | DATA_DIR = data
+2026-05-13 14:36:18 | INFO | P01 | SALES_CSV = data\sales.csv
+2026-05-13 14:36:18 | INFO | P01 | TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 14:36:18 | INFO | P01 | ========================
+2026-05-13 14:36:18 | INFO | P01 | SECTION A. Acquire
+2026-05-13 14:36:18 | INFO | P01 | ========================
+2026-05-13 14:36:18 | INFO | P01 | Loading settings from .env...
+2026-05-13 14:36:18 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-topic-no-env
+2026-05-13 14:36:18 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = False
+2026-05-13 14:36:18 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 2
+2026-05-13 14:36:18 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 0.5
+2026-05-13 14:36:18 | INFO | P01 | Verifying local source data...
+2026-05-13 14:36:18 | INFO | P01 | Source file found: sales.csv
+2026-05-13 14:36:18 | INFO | P01 | Preparing local simulated topic file...
+2026-05-13 14:36:18 | INFO | P01 | Using existing topic file: streaming-01-topic-no-env.csv
+2026-05-13 14:36:18 | INFO | P01 | ========================
+2026-05-13 14:36:18 | INFO | P01 | SECTION P. Produce Messages
+2026-05-13 14:36:18 | INFO | P01 | ========================
+2026-05-13 14:36:18 | INFO | P01 | Sending messages...
+2026-05-13 14:36:18 | INFO | P01 | Sending up to 2 local message(s).
+2026-05-13 14:36:18 | INFO | P01 | Writing to simulated topic file: streaming-01-topic-no-env.csv
+2026-05-13 14:36:18 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-13 14:36:18 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 14:36:18 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 14:36:18 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-13 14:36:18 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 14:36:18 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 14:36:18 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-13 14:36:19 | INFO | P01 | ========================
+2026-05-13 14:36:19 | INFO | P01 | SECTION E. Exit
+2026-05-13 14:36:19 | INFO | P01 | ========================
+2026-05-13 14:36:19 | INFO | P01 | Summary:
+2026-05-13 14:36:19 | INFO | P01 | Sent 2 message(s).
+2026-05-13 14:36:19 | INFO | P01 | WROTE TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 14:36:19 | INFO | P01 | ========================
+2026-05-13 14:36:19 | INFO | P01 | Producer executed successfully!
+2026-05-13 14:36:19 | INFO | P01 | ========================
+2026-05-13 14:36:26 | DEBUG | C01 | No variables found in .env
+2026-05-13 14:36:26 | INFO | C01 | === RUN START ===
+2026-05-13 14:36:26 | INFO | C01 | project=C01
+2026-05-13 14:36:26 | INFO | C01 | repo_dir=streaming-01-foundations
+2026-05-13 14:36:26 | INFO | C01 | python=3.14.2
+2026-05-13 14:36:26 | INFO | C01 | os=Windows 11
+2026-05-13 14:36:26 | INFO | C01 | shell=powershell
+2026-05-13 14:36:26 | INFO | C01 | cwd=.
+2026-05-13 14:36:26 | INFO | C01 | github_actions=False
+2026-05-13 14:36:26 | INFO | C01 | ========================
+2026-05-13 14:36:26 | INFO | C01 | START consumer main()
+2026-05-13 14:36:26 | INFO | C01 | ========================
+2026-05-13 14:36:26 | INFO | C01 | ROOT_DIR = .
+2026-05-13 14:36:26 | INFO | C01 | DATA_DIR = data
+2026-05-13 14:36:26 | INFO | C01 | TOPIC_CSV = data\output\missing-env-copy-env-example.csv
+2026-05-13 14:36:26 | INFO | C01 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-13 14:36:26 | INFO | C01 | ========================
+2026-05-13 14:36:26 | INFO | C01 | SECTION A. Acquire
+2026-05-13 14:36:26 | INFO | C01 | ========================
+2026-05-13 14:36:26 | INFO | C01 | Loading settings from .env...
+2026-05-13 14:36:26 | INFO | C01 | KAFKA_TOPIC                    = missing-env-copy-env-example
+2026-05-13 14:36:26 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 2
+2026-05-13 14:36:26 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-13 14:36:26 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 3.0
+2026-05-13 14:36:26 | INFO | C01 | Verifying local simulated topic file...
+2026-05-13 14:36:26 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:36:27 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:36:27 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:36:28 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:36:28 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:36:29 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 14:36:29 | ERROR | C01 | Topic file not found: C:\Repos\streaming-01-foundations\data\output\missing-env-copy-env-example.csv
+2026-05-13 14:36:29 | ERROR | C01 | Run the local producer first, or run producer and consumer together.
+2026-05-13 15:41:31 | DEBUG | P01 | No variables found in .env
+2026-05-13 15:41:31 | INFO | P01 | === RUN START ===
+2026-05-13 15:41:31 | INFO | P01 | project=P01
+2026-05-13 15:41:31 | INFO | P01 | repo_dir=streaming-01-foundations
+2026-05-13 15:41:31 | INFO | P01 | python=3.14.2
+2026-05-13 15:41:31 | INFO | P01 | os=Windows 11
+2026-05-13 15:41:31 | INFO | P01 | shell=powershell
+2026-05-13 15:41:31 | INFO | P01 | cwd=.
+2026-05-13 15:41:31 | INFO | P01 | github_actions=False
+2026-05-13 15:41:31 | INFO | P01 | ========================
+2026-05-13 15:41:31 | INFO | P01 | START producer main()
+2026-05-13 15:41:31 | INFO | P01 | ========================
+2026-05-13 15:41:31 | INFO | P01 | ROOT_DIR = .
+2026-05-13 15:41:31 | INFO | P01 | DATA_DIR = data
+2026-05-13 15:41:31 | INFO | P01 | SALES_CSV = data\sales.csv
+2026-05-13 15:41:31 | INFO | P01 | TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 15:41:31 | INFO | P01 | ========================
+2026-05-13 15:41:31 | INFO | P01 | SECTION A. Acquire
+2026-05-13 15:41:31 | INFO | P01 | ========================
+2026-05-13 15:41:31 | INFO | P01 | Loading settings from .env...
+2026-05-13 15:41:31 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-topic-no-env
+2026-05-13 15:41:31 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = False
+2026-05-13 15:41:31 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 2
+2026-05-13 15:41:31 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 0.5
+2026-05-13 15:41:31 | INFO | P01 | Verifying local source data...
+2026-05-13 15:41:31 | INFO | P01 | Source file found: sales.csv
+2026-05-13 15:41:31 | INFO | P01 | Preparing local simulated topic file...
+2026-05-13 15:41:31 | INFO | P01 | Using existing topic file: streaming-01-topic-no-env.csv
+2026-05-13 15:41:31 | INFO | P01 | ========================
+2026-05-13 15:41:31 | INFO | P01 | SECTION P. Produce Messages
+2026-05-13 15:41:31 | INFO | P01 | ========================
+2026-05-13 15:41:31 | INFO | P01 | Sending messages...
+2026-05-13 15:41:31 | INFO | P01 | Sending up to 2 local message(s).
+2026-05-13 15:41:31 | INFO | P01 | Writing to simulated topic file: streaming-01-topic-no-env.csv
+2026-05-13 15:41:31 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-13 15:41:31 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 15:41:31 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 15:41:31 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-13 15:41:32 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 15:41:32 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 15:41:32 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-13 15:41:32 | INFO | P01 | ========================
+2026-05-13 15:41:32 | INFO | P01 | SECTION E. Exit
+2026-05-13 15:41:32 | INFO | P01 | ========================
+2026-05-13 15:41:32 | INFO | P01 | Summary:
+2026-05-13 15:41:32 | INFO | P01 | Sent 2 message(s).
+2026-05-13 15:41:32 | INFO | P01 | WROTE TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 15:41:32 | INFO | P01 | ========================
+2026-05-13 15:41:32 | INFO | P01 | Producer executed successfully!
+2026-05-13 15:41:32 | INFO | P01 | ========================
+2026-05-13 15:41:47 | DEBUG | C01 | No variables found in .env
+2026-05-13 15:41:47 | INFO | C01 | === RUN START ===
+2026-05-13 15:41:47 | INFO | C01 | project=C01
+2026-05-13 15:41:47 | INFO | C01 | repo_dir=streaming-01-foundations
+2026-05-13 15:41:47 | INFO | C01 | python=3.14.2
+2026-05-13 15:41:47 | INFO | C01 | os=Windows 11
+2026-05-13 15:41:47 | INFO | C01 | shell=powershell
+2026-05-13 15:41:47 | INFO | C01 | cwd=.
+2026-05-13 15:41:47 | INFO | C01 | github_actions=False
+2026-05-13 15:41:47 | INFO | C01 | ========================
+2026-05-13 15:41:47 | INFO | C01 | START consumer main()
+2026-05-13 15:41:47 | INFO | C01 | ========================
+2026-05-13 15:41:47 | INFO | C01 | ROOT_DIR = .
+2026-05-13 15:41:47 | INFO | C01 | DATA_DIR = data
+2026-05-13 15:41:47 | INFO | C01 | TOPIC_CSV = data\output\missing-env-copy-env-example.csv
+2026-05-13 15:41:47 | INFO | C01 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-13 15:41:47 | INFO | C01 | ========================
+2026-05-13 15:41:47 | INFO | C01 | SECTION A. Acquire
+2026-05-13 15:41:47 | INFO | C01 | ========================
+2026-05-13 15:41:47 | INFO | C01 | Loading settings from .env...
+2026-05-13 15:41:47 | INFO | C01 | KAFKA_TOPIC                    = missing-env-copy-env-example
+2026-05-13 15:41:47 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 2
+2026-05-13 15:41:47 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-13 15:41:47 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 3.0
+2026-05-13 15:41:47 | INFO | C01 | Verifying local simulated topic file...
+2026-05-13 15:41:47 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:41:48 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:41:48 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:41:49 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:41:49 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:41:50 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:41:50 | ERROR | C01 | Topic file not found: C:\Repos\streaming-01-foundations\data\output\missing-env-copy-env-example.csv
+2026-05-13 15:41:50 | ERROR | C01 | Run the local producer first, or run producer and consumer together.
+2026-05-13 15:42:19 | DEBUG | P01 | No variables found in .env
+2026-05-13 15:42:19 | INFO | P01 | === RUN START ===
+2026-05-13 15:42:19 | INFO | P01 | project=P01
+2026-05-13 15:42:19 | INFO | P01 | repo_dir=streaming-01-foundations
+2026-05-13 15:42:19 | INFO | P01 | python=3.14.2
+2026-05-13 15:42:19 | INFO | P01 | os=Windows 11
+2026-05-13 15:42:19 | INFO | P01 | shell=powershell
+2026-05-13 15:42:19 | INFO | P01 | cwd=.
+2026-05-13 15:42:19 | INFO | P01 | github_actions=False
+2026-05-13 15:42:19 | INFO | P01 | ========================
+2026-05-13 15:42:19 | INFO | P01 | START producer main()
+2026-05-13 15:42:19 | INFO | P01 | ========================
+2026-05-13 15:42:19 | INFO | P01 | ROOT_DIR = .
+2026-05-13 15:42:19 | INFO | P01 | DATA_DIR = data
+2026-05-13 15:42:19 | INFO | P01 | SALES_CSV = data\sales.csv
+2026-05-13 15:42:19 | INFO | P01 | TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 15:42:19 | INFO | P01 | ========================
+2026-05-13 15:42:19 | INFO | P01 | SECTION A. Acquire
+2026-05-13 15:42:19 | INFO | P01 | ========================
+2026-05-13 15:42:19 | INFO | P01 | Loading settings from .env...
+2026-05-13 15:42:19 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-topic-no-env
+2026-05-13 15:42:19 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = False
+2026-05-13 15:42:19 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 2
+2026-05-13 15:42:19 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 0.5
+2026-05-13 15:42:19 | INFO | P01 | Verifying local source data...
+2026-05-13 15:42:19 | INFO | P01 | Source file found: sales.csv
+2026-05-13 15:42:19 | INFO | P01 | Preparing local simulated topic file...
+2026-05-13 15:42:19 | INFO | P01 | Using existing topic file: streaming-01-topic-no-env.csv
+2026-05-13 15:42:19 | INFO | P01 | ========================
+2026-05-13 15:42:19 | INFO | P01 | SECTION P. Produce Messages
+2026-05-13 15:42:19 | INFO | P01 | ========================
+2026-05-13 15:42:19 | INFO | P01 | Sending messages...
+2026-05-13 15:42:19 | INFO | P01 | Sending up to 2 local message(s).
+2026-05-13 15:42:19 | INFO | P01 | Writing to simulated topic file: streaming-01-topic-no-env.csv
+2026-05-13 15:42:19 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-13 15:42:19 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 15:42:19 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 15:42:19 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-13 15:42:20 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 15:42:20 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 15:42:20 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-13 15:42:20 | INFO | P01 | ========================
+2026-05-13 15:42:20 | INFO | P01 | SECTION E. Exit
+2026-05-13 15:42:20 | INFO | P01 | ========================
+2026-05-13 15:42:20 | INFO | P01 | Summary:
+2026-05-13 15:42:20 | INFO | P01 | Sent 2 message(s).
+2026-05-13 15:42:20 | INFO | P01 | WROTE TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 15:42:20 | INFO | P01 | ========================
+2026-05-13 15:42:20 | INFO | P01 | Producer executed successfully!
+2026-05-13 15:42:20 | INFO | P01 | ========================
+2026-05-13 15:42:48 | DEBUG | C01 | No variables found in .env
+2026-05-13 15:42:48 | INFO | C01 | === RUN START ===
+2026-05-13 15:42:48 | INFO | C01 | project=C01
+2026-05-13 15:42:48 | INFO | C01 | repo_dir=streaming-01-foundations
+2026-05-13 15:42:48 | INFO | C01 | python=3.14.2
+2026-05-13 15:42:48 | INFO | C01 | os=Windows 11
+2026-05-13 15:42:48 | INFO | C01 | shell=powershell
+2026-05-13 15:42:48 | INFO | C01 | cwd=.
+2026-05-13 15:42:48 | INFO | C01 | github_actions=False
+2026-05-13 15:42:48 | INFO | C01 | ========================
+2026-05-13 15:42:48 | INFO | C01 | START consumer main()
+2026-05-13 15:42:48 | INFO | C01 | ========================
+2026-05-13 15:42:48 | INFO | C01 | ROOT_DIR = .
+2026-05-13 15:42:48 | INFO | C01 | DATA_DIR = data
+2026-05-13 15:42:48 | INFO | C01 | TOPIC_CSV = data\output\missing-env-copy-env-example.csv
+2026-05-13 15:42:48 | INFO | C01 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-13 15:42:48 | INFO | C01 | ========================
+2026-05-13 15:42:48 | INFO | C01 | SECTION A. Acquire
+2026-05-13 15:42:48 | INFO | C01 | ========================
+2026-05-13 15:42:48 | INFO | C01 | Loading settings from .env...
+2026-05-13 15:42:48 | INFO | C01 | KAFKA_TOPIC                    = missing-env-copy-env-example
+2026-05-13 15:42:48 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 2
+2026-05-13 15:42:48 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-13 15:42:48 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 3.0
+2026-05-13 15:42:48 | INFO | C01 | Verifying local simulated topic file...
+2026-05-13 15:42:48 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:42:48 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:42:49 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:42:49 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:42:50 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:42:50 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:42:51 | ERROR | C01 | Topic file not found: C:\Repos\streaming-01-foundations\data\output\missing-env-copy-env-example.csv
+2026-05-13 15:42:51 | ERROR | C01 | Run the local producer first, or run producer and consumer together.
+2026-05-13 15:43:15 | DEBUG | P01 | No variables found in .env
+2026-05-13 15:43:15 | INFO | P01 | === RUN START ===
+2026-05-13 15:43:15 | INFO | P01 | project=P01
+2026-05-13 15:43:15 | INFO | P01 | repo_dir=streaming-01-foundations
+2026-05-13 15:43:15 | INFO | P01 | python=3.14.2
+2026-05-13 15:43:15 | INFO | P01 | os=Windows 11
+2026-05-13 15:43:15 | INFO | P01 | shell=powershell
+2026-05-13 15:43:15 | INFO | P01 | cwd=.
+2026-05-13 15:43:15 | INFO | P01 | github_actions=False
+2026-05-13 15:43:15 | INFO | P01 | ========================
+2026-05-13 15:43:15 | INFO | P01 | START producer main()
+2026-05-13 15:43:15 | INFO | P01 | ========================
+2026-05-13 15:43:15 | INFO | P01 | ROOT_DIR = .
+2026-05-13 15:43:15 | INFO | P01 | DATA_DIR = data
+2026-05-13 15:43:15 | INFO | P01 | SALES_CSV = data\sales.csv
+2026-05-13 15:43:15 | INFO | P01 | TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 15:43:15 | INFO | P01 | ========================
+2026-05-13 15:43:15 | INFO | P01 | SECTION A. Acquire
+2026-05-13 15:43:15 | INFO | P01 | ========================
+2026-05-13 15:43:15 | INFO | P01 | Loading settings from .env...
+2026-05-13 15:43:15 | INFO | P01 | KAFKA_TOPIC                       = streaming-01-topic-no-env
+2026-05-13 15:43:15 | INFO | P01 | KAFKA_CLEAR_TOPIC_ON_START        = False
+2026-05-13 15:43:15 | INFO | P01 | PRODUCER_MESSAGE_COUNT            = 2
+2026-05-13 15:43:15 | INFO | P01 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 0.5
+2026-05-13 15:43:15 | INFO | P01 | Verifying local source data...
+2026-05-13 15:43:15 | INFO | P01 | Source file found: sales.csv
+2026-05-13 15:43:15 | INFO | P01 | Preparing local simulated topic file...
+2026-05-13 15:43:15 | INFO | P01 | Using existing topic file: streaming-01-topic-no-env.csv
+2026-05-13 15:43:15 | INFO | P01 | ========================
+2026-05-13 15:43:15 | INFO | P01 | SECTION P. Produce Messages
+2026-05-13 15:43:15 | INFO | P01 | ========================
+2026-05-13 15:43:15 | INFO | P01 | Sending messages...
+2026-05-13 15:43:15 | INFO | P01 | Sending up to 2 local message(s).
+2026-05-13 15:43:15 | INFO | P01 | Writing to simulated topic file: streaming-01-topic-no-env.csv
+2026-05-13 15:43:15 | INFO | P01 | Watch each sale arrive. Press CTRL+C to stop early.
+
+2026-05-13 15:43:15 | INFO | P01 | {
+  order_id: e7324981-a9f0-419f-b708-d0a333451fff
+  datetime: 2026-05-04T08:11:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-STREAM-005
+  unit_price: 59.99
+  quantity: 3
+  is_online: true
+  customer_id: CUST-4150
+  is_new_customer: false
+  device_type: tablet
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 15:43:15 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 15:43:15 | INFO | P01 |   MESSAGE SENT  sent=1
+2026-05-13 15:43:15 | INFO | P01 | {
+  order_id: d61943e0-f543-4b5f-9c9a-18605ea4cfe5
+  datetime: 2026-05-04T08:23:00Z
+  region_id: US-TX
+  currency_code: USD
+  product_id: PY-DATA-002
+  unit_price: 49.99
+  quantity: 1
+  is_online: true
+  customer_id: CUST-1106
+  is_new_customer: false
+  device_type: mobile
+  payment_method: paypal
+  referral_source: paid_search
+  discount_code: 
+  customer_note: Gift for my team
+}
+2026-05-13 15:43:15 | INFO | P01 |   Sending local message with key=US-TX
+2026-05-13 15:43:15 | INFO | P01 |   MESSAGE SENT  sent=2
+2026-05-13 15:43:16 | INFO | P01 | ========================
+2026-05-13 15:43:16 | INFO | P01 | SECTION E. Exit
+2026-05-13 15:43:16 | INFO | P01 | ========================
+2026-05-13 15:43:16 | INFO | P01 | Summary:
+2026-05-13 15:43:16 | INFO | P01 | Sent 2 message(s).
+2026-05-13 15:43:16 | INFO | P01 | WROTE TOPIC_CSV = data\output\streaming-01-topic-no-env.csv
+2026-05-13 15:43:16 | INFO | P01 | ========================
+2026-05-13 15:43:16 | INFO | P01 | Producer executed successfully!
+2026-05-13 15:43:16 | INFO | P01 | ========================
+2026-05-13 15:43:23 | DEBUG | C01 | No variables found in .env
+2026-05-13 15:43:23 | INFO | C01 | === RUN START ===
+2026-05-13 15:43:23 | INFO | C01 | project=C01
+2026-05-13 15:43:23 | INFO | C01 | repo_dir=streaming-01-foundations
+2026-05-13 15:43:23 | INFO | C01 | python=3.14.2
+2026-05-13 15:43:23 | INFO | C01 | os=Windows 11
+2026-05-13 15:43:23 | INFO | C01 | shell=powershell
+2026-05-13 15:43:23 | INFO | C01 | cwd=.
+2026-05-13 15:43:23 | INFO | C01 | github_actions=False
+2026-05-13 15:43:23 | INFO | C01 | ========================
+2026-05-13 15:43:23 | INFO | C01 | START consumer main()
+2026-05-13 15:43:23 | INFO | C01 | ========================
+2026-05-13 15:43:23 | INFO | C01 | ROOT_DIR = .
+2026-05-13 15:43:23 | INFO | C01 | DATA_DIR = data
+2026-05-13 15:43:23 | INFO | C01 | TOPIC_CSV = data\output\missing-env-copy-env-example.csv
+2026-05-13 15:43:23 | INFO | C01 | OUTPUT_CSV = data\output\consumed_sales.csv
+2026-05-13 15:43:23 | INFO | C01 | ========================
+2026-05-13 15:43:23 | INFO | C01 | SECTION A. Acquire
+2026-05-13 15:43:23 | INFO | C01 | ========================
+2026-05-13 15:43:23 | INFO | C01 | Loading settings from .env...
+2026-05-13 15:43:23 | INFO | C01 | KAFKA_TOPIC                    = missing-env-copy-env-example
+2026-05-13 15:43:23 | INFO | C01 | CONSUMER_MAX_MESSAGES          = 2
+2026-05-13 15:43:23 | INFO | C01 | CONSUMER_POLL_INTERVAL_SECONDS = 0.5
+2026-05-13 15:43:23 | INFO | C01 | CONSUMER_TIMEOUT_SECONDS       = 3.0
+2026-05-13 15:43:23 | INFO | C01 | Verifying local simulated topic file...
+2026-05-13 15:43:23 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:43:23 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:43:24 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:43:24 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:43:25 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:43:25 | INFO | C01 | Topic file not found yet. Waiting...
+2026-05-13 15:43:26 | ERROR | C01 | Topic file not found: C:\Repos\streaming-01-foundations\data\output\missing-env-copy-env-example.csv
+2026-05-13 15:43:26 | ERROR | C01 | Run the local producer first, or run producer and consumer together.
